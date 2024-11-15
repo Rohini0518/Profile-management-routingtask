@@ -1,36 +1,25 @@
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Button, Card } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
+import work from "./assets/work.jpg";
 
 function ProfileDetails(props) {
-  const title = props.title;
-  // const listItems=[{image:"",text:"",title:"",}]
-  const listItems = [
-    title,
-    "Led AI project",
-    "Award-winning developer",
-    "Full-stack development",
-  ];
+  const { id } = useParams();
+  const profiletext = `is a dedicated software engineer with over 5 years of
+            experience in full-stack development. Known for his innovative
+            solutions and team collaboration,`;
+
   return (
     <div className="profile-details-container">
       <Card>
-        <Card.Img variant="top" src="" />
+        <Card.Img variant="top" src={work} />
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
+          <Card.Title>{id}</Card.Title>
           <Card.Text>
-            {title} is a dedicated software engineer with over 5 years of
-            experience in full-stack development. Known for his innovative
-            solutions and team collaboration,
+            {id} {profiletext}
           </Card.Text>
         </Card.Body>
-        <ListGroup className="list-group-flush">
-          {listItems.map((item, index) => (
-            <ListGroup.Item key={index}>{item}</ListGroup.Item>
-          ))}
-        </ListGroup>
         <Button variant="primary">
-          <Link to="/home" className="home-button">
+          <Link to="/" className="home-button">
             Home Page
           </Link>
         </Button>

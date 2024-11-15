@@ -10,20 +10,7 @@ function App() {
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="home" element={<Home />} />
-        <Route
-          path="sophia"
-          element={<ProfileDetails title="Sophia"  />}
-        />
-        <Route
-          path="christopher"
-          element={<ProfileDetails title="Christopher"  />}
-        />
-        <Route
-          path="sherlock Holmes"
-          element={
-            <ProfileDetails title="Sherlock Holmes" />
-          }
-        />
+        <Route path="/:id" element={<ProfileDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

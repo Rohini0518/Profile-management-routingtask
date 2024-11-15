@@ -1,11 +1,16 @@
 function ActivityProgress() {
+  const activityBars = [
+    "activity-bar activebar",
+    "activity-bar activebar",
+    "activity-bar activebar",
+    "activity-bar",
+    "activity-bar",
+  ];
   return (
     <div className="activity-tracker">
-      <div className="activity-bar activebar"></div>
-      <div className="activity-bar activebar"></div>
-      <div className="activity-bar activebar"></div>
-      <div className="activity-bar"></div>
-      <div className="activity-bar"></div>
+      {activityBars.map((bar, index) => (
+        <div key={index} className={bar}></div>
+      ))}
     </div>
   );
 }
