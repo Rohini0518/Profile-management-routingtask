@@ -4,13 +4,18 @@ import profile2 from "./profile2.png";
 import profile3 from "./profile3.png";
 
 function Home() {
+  const profiles = [
+    { title: "Christopher", profilepic: profile1 },
+    { title: "Sherlock Holmes", profilepic: profile2 },
+    { title: "Sophia", profilepic: profile3 },
+  ];
   return (
     <div>
-      <h1>Employee Profiles</h1>
+      <h1>Users Manaagement App</h1>
       <div className="container">
-        <ProfileCard title="Christopher" profilepic={profile1} />
-        <ProfileCard title="Sherlock Holmes" profilepic={profile2} />
-        <ProfileCard title="Sophia" profilepic={profile3} />
+        {profiles.map((profile, index) => (
+          <ProfileCard title={profile.title} profilepic={profile.profilepic} />
+        ))}
       </div>
     </div>
   );
