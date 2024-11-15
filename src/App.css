@@ -59,7 +59,10 @@
 .home-button {
   color: white;
 }
-
+.profile-text {
+  text-align: start;
+  font-weight: bold;
+}
 .profile-card {
   width: 300px;
   margin: 20px;

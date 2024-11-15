@@ -42,6 +42,7 @@ function ProfileCard() {
     <div className="container">
       {profileList.map((profile, index) => (
         <Card className="profile-card" key={index}>
+          <Card.Text className="profile-text">Profile</Card.Text>
           <Card.Img className="profile-img" variant="top" src={profile.image} />
           <Card.Body>
             <Card.Title>
