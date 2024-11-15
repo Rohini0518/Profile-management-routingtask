@@ -1,9 +1,6 @@
 import "./App.css";
 import Home from "./Home";
 import NotFound from "./NotFound";
-import profile1 from "./profile1.png";
-import profile2 from "./profile2.png";
-import profile3 from "./profile3.png";
 import ProfileDetails from "./ProfileDetails";
 import { Route, Routes } from "react-router-dom";
 
@@ -11,20 +8,20 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="Home" element={<Home />} />
         <Route path="" element={<Home />} />
+        <Route path="home" element={<Home />} />
         <Route
-          path="Sophia"
-          element={<ProfileDetails title="Sophia" profilepic={profile3} />}
+          path="sophia"
+          element={<ProfileDetails title="Sophia"  />}
         />
         <Route
-          path="Christopher"
-          element={<ProfileDetails title="Christopher" profilepic={profile1} />}
+          path="christopher"
+          element={<ProfileDetails title="Christopher"  />}
         />
         <Route
-          path="Sherlock Holmes"
+          path="sherlock Holmes"
           element={
-            <ProfileDetails title="Sherlock Holmes" profilepic={profile2} />
+            <ProfileDetails title="Sherlock Holmes" />
           }
         />
         <Route path="*" element={<NotFound />} />

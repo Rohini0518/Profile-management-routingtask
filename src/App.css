@@ -37,7 +37,7 @@
   width: 60px;
   height: 180px;
 }
-.socialmedia-container {
+.social-media-container {
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -57,4 +57,15 @@
 }
 .home-button {
   color: white;
+}
+
+.profile-card {
+  width: "18rem";
+}
+
+.profile-details-container {
+  width:700px;
+  background-color: black;
+  border: 1px solid;
+  /* height:500px; */
 }

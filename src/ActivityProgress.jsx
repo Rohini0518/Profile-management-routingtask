@@ -1,4 +1,4 @@
-function ActivityProgres() {
+function ActivityProgress() {
   return (
     <div className="activity-tracker">
       <div className="activity-bar activebar"></div>
@@ -9,4 +9,4 @@ function ActivityProgres() {
     </div>
   );
 }
-export default ActivityProgres;
+export default ActivityProgress;

@@ -1,9 +1,9 @@
 function SocialMediaHandles() {
-  const medias = ["fa fa-facebook", "fa fa-twitter", "fa fa-linkedin"];
+  const medias = ["facebook", "twitter", "linkedin"];
   return (
-    <div className="socialmedia-container">
+    <div className="social-media-container">
       {medias.map((media, index) => (
-        <i key={index} className={media} aria-hidden="true"></i>
+        <i key={index} className={`fa fa-${media}`} aria-hidden="true"></i>
       ))}
     </div>
   );

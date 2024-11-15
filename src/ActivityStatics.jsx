@@ -1,10 +1,10 @@
 function ActivityStatics() {
-  const statics = ["fa fa-comments", "fa fa-download", "fa fa-thumbs-up"];
+  const statics = ["comments", "download", "thumbs-up"];
   return (
     <div>
       <div className="activity-status">
         {statics.map((item, index) => (
-          <i key={index} className={item} aria-hidden="true"></i>
+          <i key={index} className={`fa fa-${item}`} aria-hidden="true"></i>
         ))}
       </div>
     </div>
